@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ service?.name }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="service">
+    <img [src]="service.image" />
+    <ion-card-header>
+      <ion-card-title>{{ service.name }}</ion-card-title>
+      <ion-card-subtitle>Precio: ${{ service.price }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Celebra tus Quinceaños con nuestro paquetes de fotos que tenemos para ti </p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

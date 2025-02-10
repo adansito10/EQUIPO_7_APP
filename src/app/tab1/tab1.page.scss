@@ -1,0 +1,138 @@
+ion-header {
+  --background: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+ion-toolbar {
+  --background: #ffffff;
+  --color: #000000;
+}
+
+ion-content {
+  --ion-background-color: #f8f8f8;
+}
+
+.reserva-card {
+  margin-bottom: 2px;
+}
+
+.productos-titulo {
+  color: #000000;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.barra-botones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+ion-searchbar {
+  flex: 1;
+  --background: #ffffff;
+  --color: #000000;
+  --placeholder-color: #000000;
+}
+
+.vista-productos ion-button {
+  --color: #4a90e2;
+}
+
+ion-list ion-item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ion-label h2 {
+  color: #333333;
+}
+
+ion-label p {
+  color: #666666;
+}
+
+ion-button {
+  --background: #4a90e2;
+  --background-hover: #357abd;
+  --background-activated: #357abd;
+  --background-focused: #4a90e2;
+  color: #ffffff;
+}
+
+ion-card {
+  --background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+ion-card-content h2 {
+  color: #333333;
+}
+
+ion-card-content p {
+  color: #666666;
+}
+
+
+ion-list ion-item.custom-list-item {
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --ion-item-background: #ffffff;
+  --ion-item-border-color: transparent;
+}
+
+ion-list {
+  background-color: #ffffff;
+}
+
+ion-list ion-item.custom-list-item h2 {
+  color: #333333;
+  font-size: 18px;
+  margin: 0;
+}
+
+ion-list ion-item.custom-list-item p {
+  color: #666666;
+  font-size: 14px;
+}
+
+ion-thumbnail img {
+  border-radius: 4px;
+}
+
+ion-button {
+  --background: #4a90e2;
+  --background-hover: #357abd;
+  --background-activated: #357abd;
+  --background-focused: #4a90e2;
+  color: #ffffff;
+  margin-top: 8px;
+}
+
+ion-icon[name="cart"] {
+  margin-left: 5px;
+}
+
+
+
+.big-button {
+  font-size: 15px;
+  height: 150px;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  --padding-top: 15px;
+  --padding-bottom: 15px;
+ 
+}
+
+
+.ion-menu{
+    background-color: #000000;
+}

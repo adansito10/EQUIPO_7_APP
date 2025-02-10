@@ -1,0 +1,101 @@
+ion-content {
+    --background: #f8f9fa;
+  }
+  
+  /* Tarjeta de resumen */
+  .custom-card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    color: black;
+    background: white;
+    padding: 10px;
+  }
+  
+  /* Encabezado del resumen */
+  ion-card-header {
+    background: #007aff;
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding: 15px;
+  }
+  
+  /* Lista de métodos de pago */
+  ion-list {
+    background: white;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Cada método de pago */
+  ion-item {
+    --inner-padding-end: 15px;
+    --background: transparent;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Efecto al seleccionar un método */
+  ion-item:hover {
+    background: rgba(0, 122, 255, 0.1);
+  }
+  
+  /* Personalización del radio button */
+  ion-radio {
+    --color: #007aff;
+  }
+  
+  /* Texto y etiquetas */
+  ion-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+  }
+  
+  /* Notas de información */
+  ion-note {
+    font-size: 13px;
+    font-weight: 400;
+    color: gray;
+  }
+  
+  /* Campo de cupón */
+  ion-item[lines="none"] {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  /* Total a pagar */
+  ion-item[lines="full"] {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: white;
+  }
+  
+  ion-button {
+    
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+  }
+  
+  ion-button:active {
+    transform: scale(0.98);
+  }
+  
+
+  .error {
+    color: red;
+    text-align: center;
+    font-weight: bold;
+  }
+  
