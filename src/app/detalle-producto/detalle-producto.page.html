@@ -22,25 +22,10 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-item *ngIf="cardData" class="custom-item">
-    <ion-label>Selecciona cantidad:</ion-label>
-    <ion-button fill="clear" (click)="disminuirCantidad()" [disabled]="cantidadSeleccionada <= 1">
-      -
-    </ion-button>
-    <ion-label>{{ cantidadSeleccionada }}</ion-label>
-    <ion-button fill="clear" (click)="aumentarCantidad()" [disabled]="cantidadSeleccionada >= cardData.stock">
-      +
-    </ion-button>
-  </ion-item>
+ 
+ 
 
-  <ion-button 
-    expand="full" 
-    *ngIf="cardData" 
-    [routerLink]="['/pago']" 
-    [queryParams]="{ producto: cardData | json, cantidad: cantidadSeleccionada }"
-    class="custom-button">
-    Comprar {{ cantidadSeleccionada }} producto(s) - ${{ cantidadSeleccionada * cardData.price }}
-  </ion-button>
+ 
 
   <ng-template #noEncontrado>
     <p class="error">Producto no encontrado.</p>

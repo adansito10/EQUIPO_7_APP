@@ -30,25 +30,34 @@
     </ion-toolbar>
   </ion-header>
 
-<ion-content>
-  <ion-segment [(ngModel)]="category">
-    <ion-segment-button value="all">Paquetes</ion-segment-button>
-    <ion-segment-button value="long">Video</ion-segment-button>
-    <ion-segment-button value="short">Renta</ion-segment-button>
-  </ion-segment>
+  <ion-content>
+    <ion-segment [(ngModel)]="category">
+      <ion-segment-button value="todos">Paquetes</ion-segment-button>
+      <ion-segment-button value="video">Video</ion-segment-button>
+      <ion-segment-button value="renta">Renta</ion-segment-button>
+    </ion-segment>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6" *ngFor="let service of filteredServices()">
-        <ion-card>
-          <img [src]="service.image" />
-          <ion-card-content>
-            <h2>{{ service.name }}</h2>
-            <p>${{ service.price }}</p>
-            <ion-button expand="full" color="primary" (click)="verDetalles(service)">Ver detalles</ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-</ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let service of filteredServices()">
+          <ion-card (click)="verDetalles(service)">
+            <!-- Mostrar video si la categoría es 'video' -->
+            <div *ngIf="service.category === 'video'">
+              <video width="100%" controls>
+                <source [src]="service.image" type="video/mp4" />
+                Tu navegador no soporta la etiqueta de video.
+              </video>
+            </div>
+            <!-- Mostrar imagen si no es un video -->
+            <div *ngIf="service.category !== 'video'">
+              <img [src]="service.image" />
+            </div>
+            <ion-card-content>
+              <h2>{{ service.name }}</h2>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>

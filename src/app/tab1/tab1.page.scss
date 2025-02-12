@@ -206,7 +206,7 @@ ion-content {
 
 /* Botón de Reserva */
 .big-reserve-button {
-  background-color: #93887e;
+  background-color: #7a7168;
   color: white;
   font-weight: bold;
   font-size: 18px;
@@ -260,4 +260,10 @@ ion-item {
   margin-left: 15px;
   margin-top: 10px;
   color: #ffffff; /* Color sutil pero visible */
+}
+
+.productos-titulo {
+  font-style: italic;
+  text-align: left;
+  margin-top:70px;
 }

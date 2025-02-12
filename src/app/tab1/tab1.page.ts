@@ -21,8 +21,8 @@ export class Tab1Page {
   ];
   
   productosFiltrados = [...this.productos]; 
-  carrito: any[] = []; 
-  contadorCarrito: number = 0; 
+  carrito: any[] = JSON.parse(localStorage.getItem('carrito') || '[]'); 
+  contadorCarrito: number = this.carrito.reduce((total, p) => total + p.cantidad, 0);
 
   constructor(
     private menuCtrl: MenuController,
@@ -46,37 +46,46 @@ export class Tab1Page {
   }
 
   agregarAlCarrito(producto: any) {
-    this.carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
-  
     let item = this.carrito.find(p => p.id === producto.id);
   
     if (item) {
-      item.cantidad += 1; // Si ya está en el carrito, aumenta la cantidad
+      item.cantidad++;
     } else {
-      producto.cantidad = 1;
-      producto.enCarrito = true;
-      this.carrito.push(producto);
+      this.carrito.push({ ...producto, cantidad: 1 });
     }
+  
+    this.actualizarCarrito();
+  }
 
+  aumentarCantidad(id: number) {
+    let item = this.carrito.find(p => p.id === id);
+    if (item) {
+      item.cantidad++;
+      this.actualizarCarrito();
+    }
+  }
+
+  disminuirCantidad(id: number) {
+    let item = this.carrito.find(p => p.id === id);
+    if (item && item.cantidad > 1) {
+      item.cantidad--;
+      this.actualizarCarrito();
+    } else {
+      this.eliminarDelCarrito(id);
+    }
+  }
+
+  eliminarDelCarrito(id: number) {
+    this.carrito = this.carrito.filter(p => p.id !== id);
+    this.actualizarCarrito();
+  }
+
+  actualizarCarrito() {
     this.contadorCarrito = this.carrito.reduce((total, p) => total + p.cantidad, 0);
     localStorage.setItem('carrito', JSON.stringify(this.carrito));
   }
 
-  cambiarCantidad(producto: any, cambio: number) {
-    let index = this.carrito.findIndex(p => p.id === producto.id);
-    if (index !== -1) {
-      this.carrito[index].cantidad += cambio;
-      if (this.carrito[index].cantidad <= 0) {
-        this.carrito.splice(index, 1);
-        producto.enCarrito = false;
-      }
-    }
-
-    this.contadorCarrito = this.carrito.reduce((total, p) => total + p.cantidad, 0);
-    localStorage.setItem('carrito', JSON.stringify(this.carrito));
-  }
-
-  verDetalleProducto(id: number) {
+  verDetalles(id: number) {
     this.router.navigate(['/detalle-producto', id]);
   }
 
