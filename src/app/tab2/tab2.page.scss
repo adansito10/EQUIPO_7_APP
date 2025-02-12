@@ -1,15 +1,15 @@
 ion-header {
-    --background: #ffffff;
+    --background: #070707;
     border-bottom: 1px solid #e0e0e0;
   }
   
   ion-toolbar {
-    --background: #ffffff;
-    --color: #000000;
+    --background: #000000;
+    --color: #ffffff;
   }
   
   ion-content {
-    --ion-background-color: #f8f8f8;
+    --ion-background-color: #000000;
   }
   
   .reserva-card {
@@ -64,7 +64,7 @@ ion-header {
   }
   
   ion-card {
-    --background: #ffffff;
+    --background: #d0c1df;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     margin-bottom: 20px;

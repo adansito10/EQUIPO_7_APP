@@ -35,3 +35,23 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+
+.seccion-bienvenida {
+    background-color: #f5e6d9; /* Color de fondo */
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boton-reserva {
+    margin-top: 20px; /* Espacio entre el texto y el botón */
+    width: 90%; /* Asegura que el botón sea ancho */
+    max-width: 400px; /* Máximo tamaño */
+  }
+  
+  

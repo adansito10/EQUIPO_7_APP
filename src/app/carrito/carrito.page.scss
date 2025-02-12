@@ -1,0 +1,49 @@
+.carrito {
+    padding: 20px;
+  }
+  
+  .producto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+  
+  .producto-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 8px;
+  }
+  
+  .producto-info {
+    flex-grow: 1;
+  }
+  
+  .producto-nombre {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+  }
+  
+  .producto-precio {
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .confirmar {
+    padding-top: 30px;
+    text-align: center;
+  }
+  
+  ion-button {
+    --border-radius: 25px;
+    --background: #3880ff;
+    --color: white;
+    font-size: 18px;
+    padding: 12px;
+  }
+  

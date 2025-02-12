@@ -1,138 +1,263 @@
-ion-header {
-  --background: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+/* Estilos generales */
+:root {
+  --color-fondo: #1e1e1e;
+  --color-tarjeta: #2a2a2a;
+  --color-texto: #ffffff;
+  --color-boton: #430976;
+  --color-boton-hover: #5c0d9e;
+  --color-sombra: rgba(0, 0, 0, 0.3);
 }
 
+/* Barra superior */
 ion-toolbar {
-  --background: #ffffff;
-  --color: #000000;
+  --background: var(--color-fondo);
+  --color: var(--color-texto);
+  box-shadow: 0 4px 6px var(--color-sombra);
 }
 
-ion-content {
-  --ion-background-color: #f8f8f8;
+.menu-button-container {
+  display: flex;
+  align-items: center;
 }
 
-.reserva-card {
-  margin-bottom: 2px;
+.menu-label {
+  margin-left: 8px;
+  font-weight: bold;
+  color: var(--color-texto);
+  font-size: 16px;
 }
 
-.productos-titulo {
-  color: #000000;
+/* Sección de bienvenida */
+.welcome-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(145deg, #2a1f2d, #1e1e1e);
+  border-radius: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 10px var(--color-sombra);
+}
+
+.logo-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 3px solid var(--color-texto);
+  box-shadow: 0 4px 10px var(--color-sombra);
+}
+
+.welcome-section h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  color: var(--color-texto);
+  margin-bottom: 20px;
+}
+
+.big-reserve-button {
   font-size: 18px;
-  margin-top: 20px;
+  padding: 16px 32px;
+  border-radius: 30px;
+  --background: var(--color-boton);
+  --color: var(--color-texto);
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: 0 4px 6px var(--color-sombra);
+  transition: background 0.3s ease;
 }
 
+.big-reserve-button:hover {
+  --background: var(--color-boton-hover);
+}
+
+/* Título de productos */
+.productos-titulo {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--color-texto);
+  text-align: center;
+  padding: 20px;
+  margin: 20px 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Barra de búsqueda y botones de vista */
 .barra-botones {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: var(--color-tarjeta);
+  border-radius: 12px;
+  margin: 20px;
+  box-shadow: 0 4px 6px var(--color-sombra);
 }
 
 ion-searchbar {
-  flex: 1;
-  --background: #ffffff;
-  --color: #000000;
-  --placeholder-color: #000000;
+  --background: var(--color-fondo);
+  --color: var(--color-texto);
+  --placeholder-color: #999;
+  --border-radius: 12px;
+  --box-shadow: none;
+}
+
+.vista-productos {
+  display: flex;
+  gap: 10px;
 }
 
 .vista-productos ion-button {
-  --color: #4a90e2;
+  --color: var(--color-texto);
+  --background: var(--color-tarjeta);
+  --border-radius: 12px;
+  --box-shadow: 0 2px 4px var(--color-sombra);
+  transition: background 0.3s ease;
 }
 
-ion-list ion-item {
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.vista-productos ion-button:hover {
+  --background: var(--color-boton);
 }
 
-ion-label h2 {
-  color: #333333;
+/* Tarjetas de productos */
+.producto-card {
+  background: var(--color-tarjeta);
+  color: var(--color-texto);
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 10px var(--color-sombra);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-ion-label p {
-  color: #666666;
+.producto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px var(--color-sombra);
 }
 
-ion-button {
-  --background: #4a90e2;
-  --background-hover: #357abd;
-  --background-activated: #357abd;
-  --background-focused: #4a90e2;
-  color: #ffffff;
+.imagen-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-fondo);
 }
 
-ion-card {
-  --background: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin-bottom: 20px;
+.producto-img {
+  max-width: 100%;
+  height: auto;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
 }
 
-ion-card-content h2 {
-  color: #333333;
+.producto-img:hover {
+  transform: scale(1.1);
 }
 
-ion-card-content p {
-  color: #666666;
-}
-
-
-ion-list ion-item.custom-list-item {
-  background-color: #ffffff;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  --ion-item-background: #ffffff;
-  --ion-item-border-color: transparent;
-}
-
-ion-list {
-  background-color: #ffffff;
-}
-
-ion-list ion-item.custom-list-item h2 {
-  color: #333333;
+.producto-nombre {
   font-size: 18px;
-  margin: 0;
+  font-weight: bold;
+  margin: 10px 0;
 }
 
-ion-list ion-item.custom-list-item p {
-  color: #666666;
-  font-size: 14px;
+.producto-precio {
+  font-size: 16px;
+  color: var(--color-texto);
+  margin: 10px 0;
 }
 
-ion-thumbnail img {
-  border-radius: 4px;
+.boton-carrito {
+  font-size: 16px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  --background: var(--color-boton);
+  --color: var(--color-texto);
+  font-weight: bold;
+  box-shadow: 0 4px 6px var(--color-sombra);
+  transition: background 0.3s ease;
 }
 
-ion-button {
-  --background: #4a90e2;
-  --background-hover: #357abd;
-  --background-activated: #357abd;
-  --background-focused: #4a90e2;
-  color: #ffffff;
-  margin-top: 8px;
+.boton-carrito:hover {
+  --background: var(--color-boton-hover);
 }
 
-ion-icon[name="cart"] {
+
+
+
+
+
+
+
+
+
+/* General */
+ion-content {
+  --background: #000000;
+}
+
+
+
+/* Botón de Reserva */
+.big-reserve-button {
+  background-color: #93887e;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+
+
+/* Aumentar el tamaño del menú */
+.custom-menu {
+  --width: 280px; /* Ancho más grande */
+  background: #003366; /* Fondo oscuro */
+}
+
+/* Estilo de iconos en el menú */
+.menu-icon {
+  color: white !important;
+  font-size: 22px;
+}
+
+/* Texto del menú en blanco */
+ion-item {
+  color: white !important;
+}
+
+/* Asegurar que el menú se vea bien */
+.ion-menu::part(backdrop) {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Espaciado y estilo de los botones */
+.menu-button-container {
+  display: flex;
+  align-items: center;
+}
+
+.menu-label {
+  font-weight: bold;
+  font-size: 16px;
   margin-left: 5px;
 }
 
 
 
-.big-button {
-  font-size: 15px;
-  height: 150px;
-  --padding-start: 20px;
-  --padding-end: 20px;
-  --padding-top: 15px;
-  --padding-bottom: 15px;
- 
-}
 
 
-.ion-menu{
-    background-color: #000000;
+.bienvenidos-text {
+  font-style: italic; /* Letra cursiva */
+  font-size: 25px;
+  margin-left: 15px;
+  margin-top: 10px;
+  color: #ffffff; /* Color sutil pero visible */
 }

@@ -38,6 +38,18 @@ const routes: Routes = [
   },
   { path: 'tab1', component: Tab1Page },
   { path: 'detalle-producto/:id', component: DetalleProductoPage },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
+  {
+    path: 'reserva-cita',
+    loadChildren: () => import('./reserva-cita/reserva-cita.module').then( m => m.ReservaCitaPageModule)
+  },
+  {
+    path: 'contact-form',
+    loadChildren: () => import('./contact-form/contact-form.module').then( m => m.ContactFormPageModule)
+  },
   
 ];
 @NgModule({
